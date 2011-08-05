@@ -1,0 +1,8 @@
+
+Import( 'env' )
+
+sqliteSources = Glob( 'src/*.c' ) + Glob( 'src/*.cpp' )
+sqlite = env.Library( 'msgpack', sqliteSources, CPPPATH=['src', '../'] )
+
+Return( 'sqlite' )
+
